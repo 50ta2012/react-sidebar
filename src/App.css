@@ -1,7 +1,7 @@
 .grid-container{
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: max-content auto;
   grid-template-rows: 8vh auto;
   background-color: black;
   padding: 5px;
@@ -19,10 +19,36 @@
 }
 
 .menu{
-  background-color: white;
+  background-color: #e9ecef;
+  padding: 5px;
 
 }
 
 .main{
   background-color: white;
+}
+
+.tab-header{
+  font-size: 1.8rem;
+  color: #212529 !important;
+}
+
+.tab-icon{
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.tab-content{
+  background-color: #fff !important;
+  padding: 5px;
+}
+
+.tab-link{
+  font-size: 1.4rem;
+  color: #212529 !important;
+}
+
+.tab-link:hover {
+  background-color: #0d6efd !important;
+  color: #fff !important;
 }
