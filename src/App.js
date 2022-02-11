@@ -1,6 +1,19 @@
 import './App.css';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from "react-router-dom";
+
+function Home(){
+  return(
+    <h1>Home</h1>
+  )
+}
+
+function About(){
+  return(
+    <h1>About</h1>
+  )
+}
 
 function App() {
 
@@ -20,13 +33,13 @@ function App() {
             <div className="collapse" id="tab-1">
               <ul className="nav flex-column tab-content">
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#" >案件審查</a>
+                  <a className="nav-link tab-link" href="/" >Home</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#">資料管理</a>
+                  <a className="nav-link tab-link" href="about">About</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#">設備管理</a>
+                  <a className="nav-link tab-link" href="3">設備管理</a>
                 </li>
               </ul>
             </div>
@@ -42,20 +55,25 @@ function App() {
             <div className="collapse" id="tab-2">
               <ul className="nav flex-column tab-content">
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#" >案件審查</a>
+                  <a className="nav-link tab-link" href="4" >案件審查</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#">資料管理</a>
+                  <a className="nav-link tab-link" href="5">資料管理</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link tab-link" href="#">設備管理</a>
+                  <a className="nav-link tab-link" href="6">設備管理</a>
                 </li>
               </ul>
             </div>
           </li>
         </ul>
       </div>
-      <div className='main'>3</div>
+      <div className='main'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="about" element={<About />} />
+        </Routes>
+      </div>
     </div>
   );
 }
